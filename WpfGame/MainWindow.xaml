@@ -1,0 +1,90 @@
+﻿<Window x:Class="WpfGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfGame"
+        mc:Ignorable="d"
+        Title="JumpChocziJump" Height="900" Width="1600">
+    <Canvas Name="myCanvas" Focusable="True" KeyDown="keyIsDown" KeyUp="keyIsUp" Background="LightBlue">
+
+        <!--MAIN WINDOW-->
+        <Rectangle Name="background1" Height="930" Width="2800" Fill="Red" Canvas.Left="0" />
+        <Rectangle Name="background2" Height="930" Width="2800" Fill="Blue" Canvas.Left="2800"/>
+
+
+        <!--TOPBAR-->
+
+
+        <Rectangle Name="platform1" Tag="platform" Height="40" Width="420" Fill="Pink" Canvas.Left="200" Canvas.Top="600"/>
+        <Rectangle Name="platform2" Tag="platform" Height="40" Width="420" Fill="Orange" Canvas.Left="400" Canvas.Top="400"/>
+        <Rectangle Name="platform3" Tag="platform" Height="40" Width="420" Fill="Orange" Canvas.Left="600" Canvas.Top="200"/>
+        <Rectangle Name="platform4" Tag="platform" Height="40" Width="730" Fill="brown" Canvas.Left="1245" Canvas.Top="400"/>
+        <Rectangle Name="platform5" Tag="platform" Height="40" Width="730" Fill="Orange" Canvas.Left="2060" Canvas.Top="200"/>
+        <Rectangle Name="platform6" Tag="platform" Height="40" Width="325" Fill="Orange" Canvas.Left="2290" Canvas.Top="400"/>
+        <Rectangle Name="platform7" Tag="platform" Height="40" Width="730" Fill="Orange" Canvas.Left="1755" Canvas.Top="600"/>
+        <Rectangle Name="platform8" Tag="platform" Height="40" Width="130" Fill="Orange" Canvas.Left="1200" Canvas.Top="600"/>
+
+        <Rectangle Name="obsticle1" Tag="platform2" Height="45" Width="50" Fill="Gray" Canvas.Left="680" Canvas.Top="355" Visibility="Hidden"/>
+        <Rectangle Name="obsticle2" Tag="platform3" Height="45" Width="50" Fill="Gray" Canvas.Left="690" Canvas.Top="155"/>
+        <Rectangle Name="obsticle3" Tag="platform3" Height="45" Width="50" Fill="Gray" Canvas.Left="875" Canvas.Top="155"/>
+        <Rectangle Name="obsticle4" Tag="platform4" Height="45" Width="50" Fill="Gray" Canvas.Left="1340" Canvas.Top="355" Visibility="Hidden"/>
+        <Rectangle Name="obsticle5" Tag="platform4" Height="45" Width="50" Fill="Gray" Canvas.Left="1580" Canvas.Top="355" Visibility="Hidden"/>
+        <Rectangle Name="obsticle6" Tag="platform4" Height="45" Width="50" Fill="Gray" Canvas.Left="1775" Canvas.Top="355"/>
+        <Rectangle Name="obsticle7" Tag="platform7" Height="45" Width="50" Fill="Gray" Canvas.Left="1885" Canvas.Top="555" Visibility="Hidden"/>
+        <Rectangle Name="obsticle8" Tag="platform7" Height="45" Width="50" Fill="Gray" Canvas.Left="2110" Canvas.Top="555"/>
+        <Rectangle Name="obsticle9" Tag="platform7" Height="45" Width="50" Fill="Gray" Canvas.Left="2325" Canvas.Top="555" Visibility="Hidden"/>
+        <Rectangle Name="obsticle10" Tag="platform6" Height="45" Width="50" Fill="Gray" Canvas.Left="2435" Canvas.Top="355" RenderTransformOrigin="12.2,6.97"/>
+        <Rectangle Name="obsticle11" Tag="platform5" Height="45" Width="50" Fill="Gray" Canvas.Left="2630" Canvas.Top="155"/>
+        <Rectangle Name="obsticle12" Tag="platform5" Height="45" Width="50" Fill="Gray" Canvas.Left="2410" Canvas.Top="155"/>
+        <Rectangle Name="obsticle13" Tag="g1" Height="45" Width="50" Fill="Gray" Canvas.Left="1170" Canvas.Top="745"/>
+        <Rectangle Name="obsticle14" Tag="g2" Height="45" Width="50" Fill="Gray" Canvas.Left="2940" Canvas.Top="745"/>
+        <Rectangle Name="obsticle15" Tag="g2" Height="45" Width="50" Fill="Gray" Canvas.Left="2745" Canvas.Top="745" Visibility="Hidden"/>
+        <Rectangle Name="obsticle16" Tag="g2" Height="45" Width="50" Fill="Gray" Canvas.Left="2625" Canvas.Top="745"/>
+        <Rectangle Name="obsticle17" Tag="g2" Height="45" Width="50" Fill="Gray" Canvas.Left="2270" Canvas.Top="745"/>
+        <Rectangle Name="obsticle18" Tag="g2" Height="45" Width="50" Fill="Gray" Canvas.Left="2145" Canvas.Top="745" Visibility="Hidden"/>
+        <Rectangle Name="obsticle19" Tag="g2" Height="45" Width="50" Fill="Gray" Canvas.Left="1945" Canvas.Top="745"/>
+        <Rectangle Name="obsticle21" Tag="platform2" Height="45" Width="50" Fill="Gray" Canvas.Left="485" Canvas.Top="355"/>
+        <Rectangle Name="obsticle22" Tag="g1" Height="45" Width="50" Fill="Gray" Canvas.Left="195" Canvas.Top="745"/>
+        <Rectangle Name="obsticle23" Tag="g1" Height="45" Width="50" Fill="Gray" Canvas.Left="450" Canvas.Top="745" Visibility="Hidden"/>
+        <Rectangle Name="obsticle24" Tag="g1" Height="45" Width="50" Fill="Gray" Canvas.Left="675" Canvas.Top="745"/>
+        <Rectangle Name="obsticle25" Tag="g1" Height="45" Width="50" Fill="Gray" Canvas.Left="905" Canvas.Top="745" Visibility="Hidden"/>
+        <Rectangle Name="obsticle26" Tag="platform1" Height="45" Width="50" Fill="Pink" Canvas.Left="475" Canvas.Top="555"/>
+        <Rectangle Name="obsticle28" Tag="platform1" Height="45" Width="50" Fill="Pink" Canvas.Left="300" Canvas.Top="555" Visibility="Hidden"/>
+        <Rectangle Name="obsticle29" Tag="platform5" Height="45" Width="50" Fill="Gray" Canvas.Left="2175" Canvas.Top="155"/>
+
+        <Rectangle Name="point1" Tag="platform8" Height="45" Width="50" Fill="Gold" Canvas.Left="1250" Canvas.Top="500" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point2" Tag="platform5" Height="45" Width="50" Fill="Gold" Canvas.Left="2550" Canvas.Top="70" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point3" Tag="platform5" Height="45" Width="50" Fill="Gold" Canvas.Left="2290" Canvas.Top="70" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point4" Tag="platform6" Height="45" Width="50" Fill="Gold" Canvas.Left="2435" Canvas.Top="290" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point5" Tag="platform7" Height="45" Width="50" Fill="Gold" Canvas.Left="2315" Canvas.Top="485" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point6" Tag="platform7" Height="45" Width="50" Fill="Gold" Canvas.Left="1925" Canvas.Top="495" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point7" Tag="platform4" Height="45" Width="50" Fill="Gold" Canvas.Left="1710" Canvas.Top="295" RenderTransformOrigin="2.307,0.104" RadiusY="22.667" RadiusX="22.667"/>
+        <Rectangle Name="point8" Tag="platform4" Height="45" Width="50" Fill="Gold" Canvas.Left="1445" Canvas.Top="295" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point9" Tag="platform3" Height="45" Width="50" Fill="Gold" Canvas.Left="780" Canvas.Top="110" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point10" Tag="platform2" Height="45" Width="50" Fill="Gold" Canvas.Left="585" Canvas.Top="310" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+        <Rectangle Name="point11" Tag="platform1" Height="45" Width="50" Fill="Gold" Canvas.Left="365" Canvas.Top="505" RadiusY="25" RadiusX="25" RenderTransformOrigin="2.307,0.104"/>
+
+
+
+
+        <Rectangle Name="g1" Tag="platform" Height="40" Width="1460" Fill="Orange" Canvas.Top="791" Canvas.Left="10"/>
+        <Rectangle Name="g2" Tag="platform" Height="40" Width="1460" Fill="Orange" Canvas.Top="791" Canvas.Left="1745"/>
+
+
+        <Rectangle Name="player" Height="100" Width="50" Canvas.Left="45"  Canvas.Top="650">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Img/Right1.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Name="topBar" Height="90" Width="1600" VerticalAlignment="Top" >
+            <Rectangle.Fill>
+                <ImageBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Name="interface_GAMEOVER" Content="" Canvas.Left="586" Canvas.Top="15" Height="66" Width="544" FontSize="36"/>
+        <Label Name="interfaceFramerate" Content="FPS: 0" Canvas.Left="27" Canvas.Top="15" Height="66" Width="248" FontSize="36"/>
+        <Label Name="interface_score" Content="Points: " Canvas.Left="285" Canvas.Top="15" Height="66" Width="248" FontSize="36"/>
+    </Canvas>
+</Window>
